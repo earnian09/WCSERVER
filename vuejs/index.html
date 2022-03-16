@@ -1,0 +1,50 @@
+
+<html>
+    <!-- Name: Earn Christian Laxamana -->
+    <head>
+        <script src="https://unpkg.com/vue@3.0.2"></script>
+        <title>Vue JS Demo Application</title>
+    </head>
+    <body>
+        <div id="app">
+            <p> {{ tittle }} - {{ author }} - {{ age }}</p>
+            <button v-on:clock="age++">Get Older</button>
+            <button v-on:clock="age--">Get Younger</button>
+            <button @click="title = 'The title has changed.">Change Title</button>
+        </div>
+
+        <div id="two-way-binding">
+            <p> {{ message }} </p>
+            <input v-model="message" />
+
+        </div>
+
+        <div id="conditional-rendering">
+            <span v-if="seen">Now you see this text</span>
+        </div>
+
+        <div id="books">
+            <div v-if="showBooks">
+                <p> {{ btitle }} - {{ bauthor }} - {{ year }}</p>
+            </div>
+
+            <button @click="toggleShowBooks">
+                <span v-if="showBooks">Hide Books</span>
+                <span v-else>Hide Books</span> 
+            </button>
+        </div>
+
+        <div id="list-rendering">
+            <ol>
+                <li v-for="todo in todos">{{ todo.text }}</li>
+            </ol>
+        </div>
+
+        <script src="app.js"></script>
+        <script src="twoway.js"></script>
+        <script src="conditionalif.js"></script>
+        <script src="books.js"></script>
+        <script src="listfor.js"></script>
+    </body>
+</html>
+
